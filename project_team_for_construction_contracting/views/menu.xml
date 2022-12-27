@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <menuitem id="project_teams_id" name="Project Teams" action="project_teams_action" parent="Project_Job_Costing.configuration"/>
+        <menuitem id="cost_sheet_tag_id" name="Cost Sheet Tags" action="cost_sheet_tag_action" parent="Project_Job_Costing.configuration"/>
+    </data>
+</odoo>

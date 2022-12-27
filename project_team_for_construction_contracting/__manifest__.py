@@ -1,0 +1,23 @@
+{
+    'name': "Project Team for construction and contracting ",
+    'version': '16.0.1.0.0',
+    'summary': """Project Team for construction and contracting """,
+    'description': 'Project Team for construction and contracting ',
+    'author': 'Cybrosys Techno Solutions',
+    'company': 'Cybrosys Techno Solutions',
+    'maintainer': 'Cybrosys Techno Solutions',
+    'website': "https://www.cybrosys.com",
+    'depends': ['base', 'product', 'stock', 'project', 'purchase',
+                'account', 'hr', 'mail', 'contacts', 'material_purchase_requisition'],
+
+    'data': ['security/ir.model.access.csv',
+             'data/ir_sequence_project_teams.xml',
+             'views/project_team.xml',
+             'views/cost_sheet_tag.xml',
+             'views/project_team_inherit.xml',
+             'views/menu.xml',
+             ],
+    # 'license': 'AGPL-3',
+    'installable': True,
+    'application': False,
+}

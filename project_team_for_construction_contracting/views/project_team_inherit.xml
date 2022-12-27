@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="project_team_inherit" model="ir.ui.view">
+            <field name="name">Project Team</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="Project_Job_Costing.projects_cust_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position="before">
+                    <field name="project_teams_id"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="project_teams_notebook_inherit" model="ir.ui.view">
+            <field name="name">Project Teams</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="Project_Job_Costing.projects_cust_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='construction_sites']" position="after">
+                    <page attrs="{'invisible':[('project_teams_id','=',False)]}" name="project_teams_id"
+                          string="Project Teams">
+                        <label for="site_engineer_id" string="Site Engineer"/>
+                        <field name="site_engineer_id"/>
+                        <br/>
+                        <br/>
+                        <div>
+                            <h2 style="color:blue">Team Members</h2>
+                            <field name="project_teams_line_ids">
+                                <tree editable="bottom" options="{'no_create': True, 'no_open': True}">
+                                    <field name="employee_id"/>
+                                    <field name="login_id"/>
+                                    <field name="language_id"/>
+                                    <field name="company_id"/>
+                                    <field name="latest_authentication"/>
+                                    <field name="is_two_factor_authentication"/>
+                                </tree>
+                            </field>
+                        </div>
+                        <br></br>
+                        <div>
+                            <h2 style="color:blue">Store Officers</h2>
+                            <field name="project_teams_line_ids_2">
+                                <tree editable="bottom" options="{'no_create': True, 'no_open': True}">
+                                    <field name="employee_id"/>
+                                    <field name="login_id"/>
+                                    <field name="language_id"/>
+                                    <field name="company_id"/>
+                                    <field name="latest_authentication"/>
+                                    <field name="is_two_factor_authentication"/>
+                                </tree>
+                            </field>
+                        </div>
+                        <br></br>
+                        <div>
+                            <h2 style="color:blue">Security Guard</h2>
+                            <field name="project_teams_line_ids_3" options="{'no_create': True, 'no_open': True}">
+                                <tree editable="bottom" >
+                                    <field name="employee_id"/>
+                                    <field name="login_id"/>
+                                    <field name="language_id"/>
+                                    <field name="company_id"/>
+                                    <field name="latest_authentication"/>
+                                    <field name="is_two_factor_authentication"/>
+                                </tree>
+                            </field>
+                        </div>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

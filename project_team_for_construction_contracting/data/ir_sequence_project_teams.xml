@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="sequence_project_teams" model="ir.sequence">
+            <field name="name">Project Teams</field>
+            <field name="code">project.teams</field>
+            <field name="active">TRUE</field>
+            <field name="prefix">PT</field>
+            <field name="padding">6</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+    </data>
+</odoo>

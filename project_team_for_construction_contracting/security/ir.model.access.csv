@@ -1,0 +1,10 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+
+access_project_teams1,project_teams,model_project_teams,base.group_user,1,1,1,1
+access_team_members_line1,team_members_line,model_team_members_line,base.group_user,1,1,1,1
+access_security_guard_line1,security_guard_line,model_security_guard_line,base.group_user,1,1,1,1
+access_store_officer_line1,store_officer_line,model_store_officer_line,base.group_user,1,1,1,1
+access_cost_sheet_tags1,cost_sheet_tags,model_cost_sheet_tags,base.group_user,1,1,1,1
+access_team_members_line_inherit1,team_members_line_inherit,model_team_members_line_inherit,base.group_user,1,1,1,1
+access_store_officer_line_inherit1,store_officer_line_inherit,model_store_officer_line_inherit,base.group_user,1,1,1,1
+access_security_guard_line_inherit1,security_guard_line_inherit,model_security_guard_line_inherit,base.group_user,1,1,1,1
